@@ -1,0 +1,27 @@
+<app-heroes [heroes]="heroes" [nameUser]="users"></app-heroes>
+
+
+<h1 align="center">page-test.component.html</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            1
+        </div>
+        <div class="col-sm">
+            <ul>
+                <li *ngIf="activated">
+                    activated
+                </li>
+                <li *ngFor="let user of users">
+                    {{user}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm">
+            3
+        </div>
+        <div class="col-sm">
+            4
+        </div>
+    </div>
+</div>

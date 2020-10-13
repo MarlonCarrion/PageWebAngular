@@ -1,0 +1,88 @@
+<h1 align="center">heroes.component.html</h1>
+  <h2 align="center">{{hero.name | uppercase}} Details</h2>
+
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <label>Id:</label>
+      </div>
+      <div class="col">
+        <input placeholder="name" value="{{hero.id}}"/>
+      </div>
+      <div class="col"></div>
+    </div>
+
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <label>name:</label>
+      </div>
+      <div class="col">
+        <input [(ngModel)]="hero.name" placeholder="name"/>
+      </div>
+      <div class="col"></div>
+    </div>
+
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <label>Country:</label>
+      </div>
+      <div class="col">
+        <input [(ngModel)]="hero.address.country" placeholder="street"/>
+      </div>
+      <div class="col"></div>
+    </div>
+
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <label>City:</label>
+      </div>
+      <div class="col">
+        <input [(ngModel)]="hero.address.city" placeholder="city"/>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h2>Desplegando una lista de objetos de tipo hero enviado desde app.component.ts</h2>
+  <li *ngFor="let heroe of heroes">
+    {{heroe | json}}
+  </li>
+  <h2>Imprimiendo el objeto ubicado en el indice [0]</h2>
+  <li>
+    {{heroes[0].address.country | json}}
+  </li>
+<h2>Imprimiendo users enviados desde app.component.ts</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ol>
+          <li *ngFor="let user of nameUser">
+            {{user}}
+          </li>
+        </ol>
+      </div>
+      <div class="col">
+        <ol>
+          <li *ngFor="let user of nameUser">
+            {{user}}
+          </li>
+        </ol>
+      </div>
+      
+    </div>
+  </div>
+
+  
+  <hr>
+
+
+
+
+
